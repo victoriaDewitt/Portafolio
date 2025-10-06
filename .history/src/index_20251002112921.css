@@ -1,0 +1,59 @@
+/* src/index.css */
+
+/* Importa Tailwind v4 */
+@import "tailwindcss";
+
+/* Tus estilos adicionales y animaciones */
+@keyframes nebulaMove {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-150px, -100px) scale(1.2); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes nebulaMove2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(120px, 80px) scale(1.15); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes nebulaMove3 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-100px, 120px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes neonOn {
+  0% { opacity: 0; text-shadow: none; }
+  50% { opacity: 1; text-shadow: 0 0 2px #0ff, 0 0 5px #0ff, 0 0 10px #0ff; }
+  100% { opacity: 1; text-shadow: 0 0 2px #0ff, 0 0 5px #0ff, 0 0 10px #0ff; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.font-quantico {
+  font-family: 'Quantico', sans-serif;
+}
+
+.font-press {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+}
+
+
+
+.text-neon { 
+  color: #0ff; 
+  text-shadow: 0 0 2px #0ff, 0 0 5px #0ff, 0 0 10px #0ff; 
+  opacity: 0; 
+  animation: neonOn 1.5s forwards; 
+}
+
+.animate-nebulaMove { animation: nebulaMove 50s ease-in-out infinite alternate; }
+.animate-nebulaMove2 { animation: nebulaMove2 60s ease-in-out infinite alternate; }
+.animate-nebulaMove3 { animation: nebulaMove3 70s ease-in-out infinite alternate; }
+
+.animate-marquee { display: inline-flex; animation: marquee 20s linear infinite; }

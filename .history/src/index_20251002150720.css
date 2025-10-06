@@ -1,0 +1,95 @@
+/* src/index.css */
+
+/* Importa Tailwind v4 */
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+/* Tus estilos adicionales y animaciones */
+@keyframes nebulaMove {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-150px, -100px) scale(1.2); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes nebulaMove2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(120px, 80px) scale(1.15); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes nebulaMove3 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-100px, 120px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* Animación para glow */
+@keyframes neonOn {
+  0% { text-shadow: 0 0 1px currentColor; }
+  50% { text-shadow: 0 0 2px currentColor, 0 0 5px currentColor, 0 0 10px currentColor; }
+  100% { text-shadow: 0 0 2px currentColor, 0 0 5px currentColor, 0 0 10px currentColor; }
+}
+
+/* Colores de neón */
+.text-neon-blue { 
+  color: #3b82f6; 
+  opacity: 1;
+  animation: neonOn 1.5s forwards;
+}
+
+.text-neon-red { 
+  color: #14bd17; 
+  opacity: 1;
+  animation: neonOn 1.5s forwards;
+}
+
+.text-neon-green { 
+  color: #22c55e; 
+  opacity: 1;
+  animation: neonOn 1.5s forwards;
+}
+
+.text-neon-purple { 
+  color:  #e61c12; 
+  opacity: 1;
+  animation: neonOn 1.5s forwards;
+}
+
+.text-neon-pink { 
+  color: #ec4899; 
+  opacity: 1;
+  animation: neonOn 1.5s forwards;
+}
+
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+  @keyframes bgShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+.font-quantico {
+  font-family: 'Quantico', sans-serif;
+}
+
+.font-press {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+}
+
+
+
+
+.animate-nebulaMove { animation: nebulaMove 50s ease-in-out infinite alternate; }
+.animate-nebulaMove2 { animation: nebulaMove2 60s ease-in-out infinite alternate; }
+.animate-nebulaMove3 { animation: nebulaMove3 70s ease-in-out infinite alternate; }
+
+.animate-marquee { display: inline-flex; animation: marquee 20s linear infinite; }

@@ -1,0 +1,46 @@
+/* src/index.css */
+
+/* Importa Tailwind */
+@import "tailwindcss";
+
+/* Fuente global */
+:root {
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Animación Marquee para Skills */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  gap: 2rem;
+  animation: marquee 20s linear infinite;
+  justify-content: center; /* centra los iconos horizontalmente */
+}
+
+/* Cursor principal */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #6366f1; /* morado tipo tu diseño */
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Cursor al hacer hover sobre elementos interactivos */
+#cursor.hovered {
+  transform: scale(2);
+  background-color: rgba(99, 102, 241, 0.3);
+  border-color: #6366f1;
+}

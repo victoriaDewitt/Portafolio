@@ -1,0 +1,82 @@
+/* src/index.css */
+
+/* Importa Tailwind v4 */
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+
+/* Tus estilos adicionales y animaciones */
+@keyframes nebulaMove {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-150px, -100px) scale(1.2); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes nebulaMove2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(120px, 80px) scale(1.15); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes nebulaMove3 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-100px, 120px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* Animación para encender letras desde gris apagado */
+@keyframes neonOn {
+  0% {
+    color: #888888; /* gris apagado inicial */
+    text-shadow: 0 0 0 #888888;
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    color: #39ff14; /* color final verde */
+    text-shadow: 0 0 2px #39ff14, 0 0 5px #39ff14, 0 0 10px #39ff14;
+    opacity: 1;
+  }
+}
+
+/* Clase para aplicar el efecto */
+.text-neon-green { 
+  color: #888888;
+  opacity: 0.6;
+  animation: neonOn 1.5s forwards;
+}
+
+
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+  @keyframes bgShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+.font-quantico {
+  font-family: 'Quantico', sans-serif;
+}
+
+.font-press {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+}
+
+
+
+
+.animate-nebulaMove { animation: nebulaMove 50s ease-in-out infinite alternate; }
+.animate-nebulaMove2 { animation: nebulaMove2 60s ease-in-out infinite alternate; }
+.animate-nebulaMove3 { animation: nebulaMove3 70s ease-in-out infinite alternate; }
+
+.animate-marquee { display: inline-flex; animation: marquee 20s linear infinite; }

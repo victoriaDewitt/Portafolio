@@ -1,0 +1,88 @@
+/* src/index.css */
+
+/* Importa Tailwind v4 */
+@import "tailwindcss";
+
+/* 1. Ajuste: Importaciones de fuentes consolidadas */
+/* Las fuentes Audiowide, Quantico y Press Start 2P ya se cargan en App.jsx y index.html */
+/* Dejamos solo las importaciones de Tailwind */
+
+
+/* =======================
+    Animaciones de Nebula
+    ======================= */
+/* 2. Ajuste: Añadir translateZ(0) para forzar la aceleración por hardware.
+   Esto puede mejorar el rendimiento y evitar problemas de renderizado en móviles. */
+@keyframes nebulaMove {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-150px, -100px, 0) scale(1.2); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes nebulaMove2 {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(120px, 80px, 0) scale(1.15); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes nebulaMove3 {
+  0% { transform: translate3d(0, 0, 0, 0) scale(1); }
+  50% { transform: translate3d(-100px, 120px, 0) scale(1.1); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+.animate-nebulaMove { animation: nebulaMove 50s ease-in-out infinite alternate; }
+.animate-nebulaMove2 { animation: nebulaMove2 60s ease-in-out infinite alternate; }
+.animate-nebulaMove3 { animation: nebulaMove3 70s ease-in-out infinite alternate; }
+
+
+/* =======================
+    Neon Glow
+    ======================= */
+@keyframes neonOn {
+  0% { color: #999; text-shadow: none; }
+  /* La escala de color se ve más fluida si usas colores relacionados */
+  50% { color: #80cfff; text-shadow: 0 0 2px #80cfff, 0 0 5px #80cfff, 0 0 10px #80cfff; }
+  100% { color: #80cfff; text-shadow: 0 0 2px #80cfff, 0 0 5px #80cfff, 0 0 10px #80cfff; }
+}
+
+.text-neon-blue {
+  color: #999;
+  /* Cambio: Usar solo forwards para que la animación termine en el estado "on" */
+  animation: neonOn 1.9s forwards; 
+}
+.text-neon-green { 
+  color: #888888;
+  opacity: 0.6;
+  animation: neonOn 1.5s forwards;
+}
+
+/* =======================
+    Marquee (banda de skills)
+    ======================= */
+/* 3. Ajuste: Usar translate3d(X, Y, Z) para mejor rendimiento de la animación */
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+.animate-marquee { display: inline-flex; animation: marquee 20s linear infinite; }
+
+
+/* =======================
+    Fondo animado suave
+    ======================= */
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.bg-gradient-animated {
+  background: linear-gradient(270deg, #3b0a45, #6f2da8, #ff4db8, #3b0a45);
+  background-size: 600% 600%;
+  animation: bgShift 30s ease infinite;
+}
+
+/* =======================
+    Fuentes (Helper Classes)
+    ======================= */
+.font-quantico { font-family: 'Quantico', sans-serif; }
+.font-press { font-family: 'Press Start 2P', cursive; }
+.audiowide-regular { font-family: "Audiowide", sans-serif; }
