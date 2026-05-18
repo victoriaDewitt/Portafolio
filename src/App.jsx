@@ -535,6 +535,43 @@ function App() {
                 </div>
               </div>
             </div>
+
+            {/* Project 4 */}
+<div className="bg-gradient-to-r from-cyan-700 to-blue-900 rounded-2xl shadow-xl w-[380px] hover:scale-105 transition-transform overflow-hidden">
+  <img src="/icons/proyect4.png" alt="QA API Tests" className="w-full h-40 object-cover" />
+
+  <div className="p-4 flex flex-col justify-between">
+    <div>
+      <h3 className="text-2xl font-quantico font-bold mb-2">
+        QA API Tests
+      </h3>
+
+      <div className="text-sm text-gray-200 mb-2">
+        C# + NUnit + RestSharp
+      </div>
+
+      <p className="text-gray-200 text-sm leading-relaxed font-quantico">
+        Automated API testing project built with C#, NUnit, and RestSharp.
+        Includes GET and POST request validation, status code testing,
+        and JSON deserialization testing using FakeStoreAPI.
+      </p>
+    </div>
+
+    <div className="mt-4 flex justify-center">
+      <a
+        href="https://github.com/victoriaDewitt/qa-api-tests"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-lg font-quantico font-semibold">
+          Explore
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+
+
           </div>
         </div>
       </section>
