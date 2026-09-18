@@ -103,7 +103,7 @@ const skillIcons = [
   { icon: "/icons/netbeans.svg", name: "NetBeans" },
   { icon: "/icons/android-studio.svg", name: "Android Studio" },
   { icon: "/icons/jetpack-compose.svg", name: "Jetpack Compose" },
-   { icon: "/icons/Kotlin.svg", name: "Kotlin" },
+   { icon: "/icons/Kotline.svg", name: "Kotlin" },
 ];
 
 const name = "VICTORIA";

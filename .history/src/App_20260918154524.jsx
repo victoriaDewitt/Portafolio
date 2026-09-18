@@ -33,6 +33,9 @@ const translations = {
     project2Desc: "Python bot that sends an email alert when a product becomes available on Amazon Mexico.",
     project3Title: "Streamline",
     project3Desc: "Messaging and task management app combining real-time messaging with collaborative task management features.",
+    project5Title: "PokeApp",
+    project5Desc: "Android Pokémon app built with Kotlin and Jetpack Compose. Consumes PokéAPI using MVVM, Retrofit, StateFlow, and Navigation Compose.",
+    
     // Education
     educationTitle: "Education",
     degree: "Bachelor’s Degree in Software Engineering (2021 - 2025)",
@@ -72,6 +75,8 @@ const translations = {
     project2Desc: "Bot de Python que envía una alerta por correo electrónico cuando un producto está disponible en Amazon México.",
     project3Title: "Streamline",
     project3Desc: "Aplicación de mensajería y gestión de tareas que combina mensajería en tiempo real con funciones de gestión de tareas colaborativas.",
+    project5Title: "PokeApp",
+    project5Desc: "Aplicación Android de Pokémon desarrollada con Kotlin y Jetpack Compose. Consume PokéAPI utilizando MVVM, Retrofit, StateFlow y Navigation Compose.",
     // Education
     educationTitle: "Educación",
     degree: "Licenciatura en Ingeniería de Software (2021 - 2025)",
@@ -96,6 +101,9 @@ const skillIcons = [
   { icon: "/icons/vscode.svg", name: "VSCode" },
   { icon: "/icons/github.svg", name: "GitHub" },
   { icon: "/icons/netbeans.svg", name: "NetBeans" },
+  { icon: "/icons/android-studio.svg", name: "Android Studio" },
+  { icon: "/icons/jetpack-compose.svg", name: "Jetpack Compose" },
+   { icon: "/icons/Kotlin.svg", name: "Kotlin" },
 ];
 
 const name = "VICTORIA";
@@ -568,6 +576,47 @@ function App() {
         </button>
       </a>
     </div>
+  </div>
+</div>
+
+{/* Project 5 */}
+<div className="bg-gradient-to-r from-yellow-500 to-orange-600 rounded-2xl shadow-xl w-[380px] hover:scale-105 transition-transform overflow-hidden">
+
+  <img
+    src="/icons/proyect5.png"
+    alt="PokeApp"
+    className="w-full h-40 object-cover"
+  />
+
+  <div className="p-4 flex flex-col justify-between">
+    <div>
+
+      <h3 className="text-2xl font-quantico font-bold mb-2">
+        {t.project5Title}
+      </h3>
+
+      <div className="text-sm text-gray-200 mb-2">
+        Kotlin + Jetpack Compose + MVVM
+      </div>
+
+      <p className="text-gray-200 text-sm leading-relaxed font-quantico">
+        {t.project5Desc}
+      </p>
+
+    </div>
+
+    <div className="mt-4 flex justify-center">
+      <a
+        href="https://github.com/victoriaDewitt/PokeApp.git"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded-lg font-quantico font-semibold">
+          {t.explore}
+        </button>
+      </a>
+    </div>
+
   </div>
 </div>
 
